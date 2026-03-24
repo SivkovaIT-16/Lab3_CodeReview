@@ -10,7 +10,8 @@
 //Node() : type(VAR), val(0), op(0), left(nullptr), right(nullptr) {}
 Node::Node(int Val) : NodeType(VAL), Value(Val), Operator(0), Left(nullptr), Right(nullptr) {}
 Node::Node(char Op, std::shared_ptr<Node> LeftChild, std::shared_ptr<Node> RightChild)
-    : NodeType(OP), Value(0), Operator(Op), Left(LeftChild), Right(RightChild) {}
+    : NodeType(OP), Value(0), Operator(Op), Left(LeftChild), Right(RightChild) {
+}
 Node::Node() : NodeType(VAR), Value(0), Operator(0), Left(nullptr), Right(nullptr) {}
 
 
@@ -107,7 +108,7 @@ std::shared_ptr<Node> ExpressionTree::ParseFactor()
         // FIX_ME: имя переменной должно начинаться с заглавной буквы
         //int val = 0;
         int Val = 0;
-       
+
         // FIX_ME: фигурная скобка перенесена на следующую строку
         //while (pos < expr.size() && isdigit(expr[pos])) {
         while (Position < Expression.size() && std::isdigit(Expression[Position]))
@@ -337,10 +338,10 @@ int ExpressionTree::EvaluateNode(const std::shared_ptr<Node>& Node) const
     case '+':
         //return l_val + r_val;
         return LeftVal + RightVal;
-    case '-': 
+    case '-':
         //return l_val - r_val;
         return LeftVal - RightVal;
-    case '*': 
+    case '*':
         //return l_val * r_val;
         return LeftVal * RightVal;
     case '/':
