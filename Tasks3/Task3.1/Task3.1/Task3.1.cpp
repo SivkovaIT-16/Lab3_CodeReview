@@ -14,7 +14,7 @@
 #include <vector>
 #include <stdexcept>
 
-// FIX_ME: добавлена функция для получения имени файла
+// FIX_ME: добавлен метод для получения имени файла
 std::string GetFileName()
 {
     std::string FileName;

@@ -31,7 +31,7 @@ private:
     // Метод для получения степени вершины.
     int GetDegree(const std::vector<std::vector<int>>& Matrix, int Vertex) const;
 
-    // FIX_ME: имена переменных должны начинаться с заглавной буквы и не могут содержать '_'
+    // FIX_ME: имена полей должны начинаться с заглавной буквы и не могут содержать '_'
     //int vertexCount_;
     //std::vector<std::vector<int>> adjacencyMatrix_;
 
