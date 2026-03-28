@@ -105,6 +105,7 @@ private:
 class ExpressionTree
 {
 public:
+    // FIX_ME: добавлен конструктор
     ExpressionTree();
 
     // FIX_ME: загрузка выражения из файла вынесена в отдельный метод класса
